@@ -45,7 +45,7 @@ public class AicraftController {
 
 	}
 
-// Thymeleaf doesn't support @DeleteMapping
+/// TODO use DeleteMapping instead of GetMapping
 	@GetMapping("/aircraft/delete")
 	public String deleteAircraft(@PathParam("aircraftId") Long aircraftId, Model model) {
 
