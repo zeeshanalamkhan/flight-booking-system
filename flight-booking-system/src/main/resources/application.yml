@@ -1,14 +1,15 @@
 server:
-  port: 8082
+  servlet:
+    context-path: /flight-booking-system
   error:
     whitelabel:
       enabled: false
 spring:
-  datasource:
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521:orcl
-    username: system
-    password: manager
+ # datasource:
+    #driver-class-name: oracle.jdbc.driver.OracleDriver
+   # url: jdbc:oracle:thin:@localhost:1521:orcl
+   # username: system
+   # password: manager
   jpa:
     show-sql: true
     format-sql: true
