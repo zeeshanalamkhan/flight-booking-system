@@ -13,7 +13,7 @@
             <h1 style="color: darkblue">Airports List </h1>
         </div>
         <div class="col-md-6">
-            <a href="/airport/new"><button type="button" class="btn btn-outline-primary" style="float: right">Add Airport</button></a>
+            <a th:href="@{/airport/new}"><button type="button" class="btn btn-outline-primary" style="float: right">Add Airport</button></a>
         </div>
     </div>
     <table class="table table-hover">
@@ -45,7 +45,7 @@
     <div>
         <ul class="pagination">
             <li class="page-item disabled">
-                <a class="page-link" href="#">Pages:</a>
+                <a class="page-link" th:href="@{#}">Pages:</a>
             </li>
             <th:block th:each="i:${#numbers.sequence(1,airports.totalPages)}">
                 <li th:class="${currentPage}==(${i-1}) ? 'page-item active' : 'page-item'">

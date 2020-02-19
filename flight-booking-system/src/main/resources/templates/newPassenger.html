@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <form action="/flight/book/new" method="post" th:object="${passenger}">
+    <form th:action="@{/flight/book/new}" method="post" th:object="${passenger}">
         <div class="row">
             <input type="hidden" th:value="${flightId}" name="flightId">
 

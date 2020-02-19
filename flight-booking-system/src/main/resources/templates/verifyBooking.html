@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <form action="/flight/book/verify" method="post">
+    <form th:action="@{/flight/book/verify}" method="post">
         <div class="row">
 
             <div class="form-group col-md-4">
@@ -108,7 +108,7 @@
                 </tbody>
             </table>
             <th:block sec:authorize="hasAnyRole('ROLE_ADMIN', 'ROLE_AGENT')">
-            <form method="post" action="/flight/book/cancel">
+            <form method="post" th:action="@{/flight/book/cancel}">
                 <input type="hidden" th:value="${passenger.passengerId}" name="passengerId">
                 <button type="submit" class="btn btn-sm btn-danger">Cancel This Ticket</button>
             </form>
